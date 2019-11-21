@@ -1,0 +1,157 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>SkyDrop</title>
+<meta http-equiv="content-Type"content="text/html;charset=utf-8">
+<link rel="stylesheet"type="text/css"href="style_menu.css">
+<link rel="stylesheet"type="text/css"href="style2.css">
+<link rel="stylesheet" href="css/style_search.css">
+<link rel="stylesheet" href="css/style_slader.css">
+<link rel="stylesheet" href="css/style_button.css">
+ <link rel="stylesheet" href="main.css" type="text/css" />
+ <link rel="stylesheet" href="css/stylefaq.css">
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(function() {
+var sldr = $('.sldr'),
+sldrContent = sldr.html(),
+slideWidth = $('.sl_ctr').outerWidth(),
+slideCount = $('.sldr img').length,
+prv_b = $('.prv_b'),
+nxt_b = $('.nxt_b'),
+sldrInterval = 3300,
+animateTime = 1000,
+course = 1,
+margin = - slideWidth;
+$('.sldr img:last').clone().prependTo('.sldr');$('.sldr img').eq(1).clone().appendTo('.sldr');$('.sldr').css('margin-left',-slideWidth);function nxt_bSlide(){interval=window.setInterval(animate,sldrInterval)}function animate(){if(margin==-slideCount*slideWidth-slideWidth){sldr.css({'marginLeft':-slideWidth});margin=-slideWidth*2}else if(margin==0&&course==-1){sldr.css({'marginLeft':-slideWidth*slideCount});margin=-slideWidth*slideCount+slideWidth}else{margin=margin-slideWidth*(course)}sldr.animate({'marginLeft':margin},animateTime)}function sldrStop(){window.clearInterval(interval)}prv_b.click(function(){if(sldr.is(':animated')){return false}var course2=course;course=-1;animate();course=course2});nxt_b.click(function(){if(sldr.is(':animated')){return false}var course2=course;course=1;animate();course=course2});sldr.add(nxt_b).add(prv_b).hover(function(){sldrStop()},nxt_bSlide);nxt_bSlide()});
+</script>
+</head>
+
+<body>
+<div id="container">
+
+<div id="header">
+
+
+    <div id="logo"><a href="SkyDrop.html"><img src="img/SD.png"width="60%"height="30%"></a><br></div>
+
+
+
+<div id="menu"><center><ul>
+  		<li><a href="#">магазин</a></li>
+  		<li><a href="#">ТОП ИГРОКОВ</a></li>
+  		<li><a href="#">БонусЫ</a></li>
+  		<li><a href="https://store.steampowered.com/login/?redir=%3Fl%3Drussian&redir_ssl=1">АВТОРИЗАЦИЯ</a></li>
+</center></ul></div>
+<div id="poisk"> <div class="search-wrapper">
+    <div class="input-holder">
+        <input type="text" class="search-input" placeholder="Поиск ..." />
+        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+    </div>
+    <span class="close" onclick="searchToggle(this, event);"></span>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script></center>
+	</div>
+
+
+</div>
+
+<div id="content">
+<h1><center>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h1>
+<br><br><br><br><br><br>
+<div class="naccs">
+  <div class="grid">
+   <div class="gc gc--1-of-3">
+    <div class="menu">
+     <div class="active"><span class="light"></span><span>Что делать, если после пополнения баланса деньги не поступили на счет?</span></div>
+     <div><span class="light"></span><span>Что делать, если предмет не пришел или вы не можете его забрать?</span></div>
+     <div><span class="light"></span><span>Что делать, если к вам добавился в стиме под видом нашего сотрудника и предложил двойной баланс за ваши вещи?</span></div>
+	 <div><span class="light"></span><span>Можно ли перевести средства со счета Steam?</span></div>
+	  <div><span class="light"></span><span>Как продать или вывести предмет с сайта?</span></div>
+    </div>
+   </div>
+   <div class="gc gc--2-of-3">
+    <ul class="nacc">
+     <li class="active">
+      <div>
+       <p>Деньги могут прийти не сразу - подождите 1 час. Если не пришли в течение часа - напишите нам в поддержку, указав подробные данные платежа.</p>
+      </div>
+     </li>
+     <li>
+      <div>
+       <p>Зайдите в свой профиль и кликните по ссылке "ЗАБРАТЬ" на купленном предмете. Мы не можем отправить вам предмет в следующих случаях:<br>
+
+<br>- У вас заблокирован обмен (заходили с нового устройства, меняли недавно пароль/почту, изменяли настройки безопасности Steam Guard, имеете VAC-бан, и т.д.). подробнее... Чтобы таких проблем не было, всегда рекомендуем проверять ваш статус трейда на специальной странице market.csgo.com
+<br>- У вас скрыт инвентарь в настройках приватности Steam
+<br>- Проверьте свою trade-ссылку в профиле и в настройках Steam - они должны совпадать
+<br>- Мы не можем купить для вас предмет на маркете и вы получаете ошибку "Продавец не отправил предмет. Попробуйте забрать его снова". Такие случаи бывают часто, но проблема в самом маркете, а не в нас. Попробуйте забрать предмет снова.
+
+Если вы не заберете свой предмет в течении четырех часов, вам вернется полная стоимость этого предмета согласно торговой площадке Steam</p>
+      </div>
+     </li>
+     <li>
+      <div>
+       <p>Остерегайтесь мошенников, которые добавляются к вам в STEAM под видом администраторов/модераторов/помощников SkyDrope. 
+	   Запомните - мы никогда не будем добавляться к вам в друзья в STEAM и предлагать продать ваши предметы по двойной цене, 
+	   давать ссылки на скачивание чего-либо (скорее всего вредоносные программы и/или стиллеры) и т.д. 
+	  Это все обман! 
+	   У вас украдут ваши предметы!!! Официальные контакты администрации можете найти у нас в группе Вконтакте (Блок"Контакты")</p>
+	   <li>
+      <div>
+       <p>Перевод денег с одного аккаунта Steam на другой ... Но вы никак не сможете перевести деньги с одного кошелька на другой, если вам это понадобится. </p>
+      </div>
+     </li>
+	 <li>
+      <div>
+       <p>Заходите в свой профиль и там будет две кнопки "Продать" и "Вывести" выбираите одну из них и все</p>
+      </div>
+     </li>
+      </div>
+     </li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index1.js"></script>
+
+
+
+
+</div>
+
+
+
+<div id="footer">
+
+<div id="copy">
+&copy2019-2020 SkyDrop
+<br>
+<br>
+На нашем сайте вы можете открыть различные<br> 
+кейсы CS:GO по самым выгодным ценам.Все<br>
+обмены проходят в автоматическом режиме с<br> 
+помощью ботов Steam
+</div>
+<div id="but1"> <button onclick="window.location.href='FAQ.html'" class="btn"id="but1">FAQ</button></div>
+<div id="but1"> <button onclick="window.location.href='sog.html'" class="btn"id="but2">Соглошение</button></div>
+<div id="but1"> <button onclick="window.location.href='form.html'"class="btn"id="but3">Контакты</button></div>
+
+
+
+
+<div id="but20">
+   <a href="https://www.facebook.com/profile.php?id=100024813439203" class="button20">Сотрудничество</a>
+</div>
+</div>
+
+</div>
+</body>
+</html>

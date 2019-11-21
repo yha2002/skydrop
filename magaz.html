@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>SkyDrop</title>
+<meta http-equiv="content-Type"content="text/html;charset=utf-8">
+<link rel="stylesheet"type="text/css"href="style_menu.css">
+<link rel="stylesheet"type="text/css"href="style.css">
+<link rel="stylesheet" href="css/style_search.css">
+<link rel="stylesheet" href="css/style_slader.css">
+<link rel="stylesheet" href="css/style_button.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(function() {
+var sldr = $('.sldr'),
+sldrContent = sldr.html(),
+slideWidth = $('.sl_ctr').outerWidth(),
+slideCount = $('.sldr img').length,
+prv_b = $('.prv_b'),
+nxt_b = $('.nxt_b'),
+sldrInterval = 3300,
+animateTime = 1000,
+course = 1,
+margin = - slideWidth;
+$('.sldr img:last').clone().prependTo('.sldr');$('.sldr img').eq(1).clone().appendTo('.sldr');$('.sldr').css('margin-left',-slideWidth);function nxt_bSlide(){interval=window.setInterval(animate,sldrInterval)}function animate(){if(margin==-slideCount*slideWidth-slideWidth){sldr.css({'marginLeft':-slideWidth});margin=-slideWidth*2}else if(margin==0&&course==-1){sldr.css({'marginLeft':-slideWidth*slideCount});margin=-slideWidth*slideCount+slideWidth}else{margin=margin-slideWidth*(course)}sldr.animate({'marginLeft':margin},animateTime)}function sldrStop(){window.clearInterval(interval)}prv_b.click(function(){if(sldr.is(':animated')){return false}var course2=course;course=-1;animate();course=course2});nxt_b.click(function(){if(sldr.is(':animated')){return false}var course2=course;course=1;animate();course=course2});sldr.add(nxt_b).add(prv_b).hover(function(){sldrStop()},nxt_bSlide);nxt_bSlide()});
+</script>
+</head>
+
+<body>
+<div id="container">
+
+<div id="header">
+
+
+    <div id="logo"><a href="SkyDrop.html"><img src="img/SD.png"width="60%"height="30%"></a><br></div>
+
+
+
+<div id="menu"><center><ul>
+  		<li><a href="magaz.html">магазин</a></li>
+  		<li><a href="#">ТОП ИГРОКОВ</a></li>
+  		<li><a href="#">БонусЫ</a></li>
+  		<li><a href="https://store.steampowered.com/login/?redir=%3Fl%3Drussian&redir_ssl=1">АВТОРИЗАЦИЯ</a></li>
+</center></ul></div>
+<div id="poisk"> <div class="search-wrapper">
+    <div class="input-holder">
+        <input type="text" class="search-input" placeholder="Поиск ..." />
+        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+    </div>
+    <span class="close" onclick="searchToggle(this, event);"></span>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script></center>
+	</div>
+
+
+</div>
+
+<div id="content">
+
+<h1>Приносим свои извинения но магазин ещё в разроботке!!!</h1>
+</div>
+
+
+
+<div id="footer">
+
+<div id="copy">
+&copy2019-2020 SkyDrop
+<br>
+<br>
+На нашем сайте вы можете открыть различные<br> 
+кейсы CS:GO по самым выгодным ценам.Все<br>
+обмены проходят в автоматическом режиме с<br> 
+помощью ботов Steam
+</div>
+<div id="but1"> <button onclick="window.location.href='FAQ.html'" class="btn"id="but1">FAQ</button></div>
+<div id="but1"> <button onclick="window.location.href='sog.html'"class="btn"id="but2">Соглошение</button></div>
+<div id="but1"> <button onclick="window.location.href='form.html'"class="btn"id="but3">Контакты</button></div>
+
+
+
+
+<div id="but20">
+   <a href="https://www.facebook.com/profile.php?id=100024813439203" class="button20">Сотрудничество</a>
+</div>
+</div>
+
+</div>
+</body>
+</html>
